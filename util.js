@@ -31,3 +31,5 @@ function getRealTarget(req) {
 function isFeatureEnabled(feature) {
     return config.enabled_feature.indexOf(feature) > -1;
 }
+
+module.exports = { getRealTarget, isFeatureEnabled };
