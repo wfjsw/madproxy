@@ -1,0 +1,5 @@
+﻿{
+  "enabled_feature": ["connect", "websocket", "common"],
+  "target": "header:x-connect-to",
+  "port": 8443
+}
