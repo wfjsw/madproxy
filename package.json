@@ -1,0 +1,22 @@
+{
+  "name": "madproxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wfjsw/madproxy.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "wfjsw",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/wfjsw/madproxy/issues"
+  },
+  "homepage": "https://github.com/wfjsw/madproxy#readme"
+}
