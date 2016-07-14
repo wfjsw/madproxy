@@ -68,9 +68,15 @@ if (_util.isFeatureEnabled('websocket')) {
 if (_util.isFeatureEnabled('common') && config.target != 'default') {
     proxy.on('request', (req, res) => {
         var target = _util.getRealTarget(req);
-        if (target)
+        if (target) {
+            // Avoid HTTP module processing following data [HACK]
+            // See https://github.com/nodejs/node/blob/v6.3.0/lib/_http_server.js#L390
+            req.socket.removeAllListeners('data');
+            req.socket.removeAllListeners('end');
+            req.socket.removeAllListeners('close');
+            // And Now Let's Tunnel
             openProxyStream(target, req.socket, false);
-        else
+        } else
             cltskt.end(http400);
     });
 } else {
