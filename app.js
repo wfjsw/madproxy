@@ -77,7 +77,8 @@ if (_util.isFeatureEnabled('common')) {
             // And Now Let's Tunnel
             openProxyStream(target, req.socket, false);
         } else
-            cltskt.end(http400);
+            res.writeHead(400);
+            res.end();
     });
 } else {
     // Output Dummy Response
