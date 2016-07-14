@@ -17,7 +17,7 @@ function getRealTarget(req) {
             case 'header':
                 return url.parse(`http://${req.headers[target[1].toLowerCase()]}`);
             case 'url':
-                target.pop();
+                target.shift();
                 return url.parse(`http://${target.join(":")}`);
             default:
                 return false;
