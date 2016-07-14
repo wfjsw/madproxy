@@ -65,7 +65,7 @@ if (_util.isFeatureEnabled('websocket')) {
 }
 
 // Handle Common Request
-if (_util.isFeatureEnabled('common') && config.target != 'default') {
+if (_util.isFeatureEnabled('common')) {
     proxy.on('request', (req, res) => {
         var target = _util.getRealTarget(req);
         if (target) {
